@@ -1,0 +1,14 @@
+A project based off of boost(a previous project).
+
+It has models of a user and exercise.
+
+Exercise can perfom al basic crud operations.
+
+I will eventually add navigator to the front end and leaflet to track a user and use
+the cordinates to populate a map route.
+
+It is a node server.
+
+It uses MongoDB Atlas.
+
+Currently deployed on Heroku but it will be dockerised and deployed on Azure. 

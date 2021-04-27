@@ -11,7 +11,7 @@ app.use(cors()); //middlewear
 app.use(express.json());
 
 
-const uri= "mongodb://RolandCloud:RolandCloud@cluster0-shard-00-00.oneyu.mongodb.net:27017,cluster0-shard-00-01.oneyu.mongodb.net:27017,cluster0-shard-00-02.oneyu.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-431mr2-shard-0&authSource=admin&retryWrites=true&w=majority";
+const uri= "mongodb+srv://RolandCloud:RolandCloud@cluster0.oneyu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 ;//my database
 mongoose.connect(uri, {useNewUrlParser:true, useCreateIndex:true, useUnifiedTopology: true}
 );

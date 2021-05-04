@@ -1,3 +1,4 @@
+require('make-promises-safe')
 const  express= require('express');
 const cors= require('cors');
 const mongoose= require('mongoose'); //helps use connect to mongoose database

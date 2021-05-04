@@ -5,7 +5,7 @@ const mongoose= require('mongoose'); //helps use connect to mongoose database
 require("dotenv").config(); 
 
 const app = express();
-const port= process.env.PORT || 5000;
+const port=  5000; //process.env.PORT ||
 
 app.use(cors()); //middlewear
 app.use(express.json());
@@ -24,9 +24,11 @@ connection.once('open', ()=>{
 
 const exercisesRouter= require('./routes/exercises');
 const usersRouter= require('./routes/users');
+const exerciseRoutesRouter= require('./routes/exercisesRoute');
 
 app.use('/exercises', exercisesRouter);
 app.use('/users', usersRouter);
+app.use('/exerciseroutes', exerciseRoutesRouter);
 
 app.listen(port, ()=>{
     console.log(`Server is running on ${port}`);

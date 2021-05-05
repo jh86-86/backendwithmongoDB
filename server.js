@@ -12,7 +12,7 @@ app.use(cors()); //middlewear
 app.use(express.json());
 
 
-const uri= process.env.ATLAS_URI;
+const uri= 'mongodb+srv://RolandCloud:RolandCloudRockjam@cluster0.oneyu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 ;//my database
 mongoose.connect(uri, {useNewUrlParser:true, useCreateIndex:true, useUnifiedTopology: true}
 )

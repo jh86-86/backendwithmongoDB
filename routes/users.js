@@ -33,7 +33,7 @@ router.get('/search', (req, res) => {
 
 router.get('/searchname', (req, res) => {
     const query = req.query.username;
-     User.find({username:{$regex: query}})
+     User.find({username:{"$regex": query}})
     .then(user => res.json(user))
     .catch(err => res.status(400).json("Error: "+ err ));
 });

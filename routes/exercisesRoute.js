@@ -36,7 +36,7 @@ router.get('/search', (req, res) => {
 
 router.route('/searchname').get((req, res) => {
     const query = req.query.username;
-     ExerciseRoute.find({username:{$regex: query}})
+     ExerciseRoute.find({username: query})
     .then(user => res.json(user))
     .catch(err => res.status(400).json("Error: "+ err ));
 });

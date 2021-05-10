@@ -10,6 +10,11 @@ const userSchema= new Schema({
         trim: true,
         minLength: 3
     },
+    email:{
+        type: String,   
+        required: true,  
+        unique: true,
+    },
 }, {
     timestamps: true,
 });

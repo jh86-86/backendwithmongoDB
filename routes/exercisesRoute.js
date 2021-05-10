@@ -27,4 +27,11 @@ router.route('/add').post((req,res)=>{
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.get('/searchname', (req, res) => {
+    const query = req.query.username;
+     ExerciseRoute.find({username:{$regex: query}})
+    .then(user => res.json(user))
+    .catch(err => res.status(400).json("Error: "+ err ));
+});
+
 module.exports =router;

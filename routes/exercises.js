@@ -9,6 +9,7 @@ router.route('/').get((req,res)=>{  //endpoint
         .catch(err => res.status(400).json('Error: '+ err));
 });
 
+
 router.route('/add').post((req,res)=>{
     const username = req.body.username;
     const description = req.body.description;

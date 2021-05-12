@@ -1,14 +1,24 @@
 A project based off of boost(a previous project).
 
-It has models of a user and exercise.
+It has models of a user and exercise and exercise route.
+It communicates with the front end.
 
-Exercise can perfom al basic crud operations.
 
-I will eventually add navigator to the front end and leaflet to track a user and use
-the cordinates to populate a map route.
+Exercise can perfom all basic crud operations.
+It takes in several pieces of data and will populate a table on the front end.
 
-It is a node server.
+Exercise routes has a search function for a specific username and a regex for a name like a certain name. 
+Exercise routes takes in an array of arrays to populate a map with points on the frontend. 
 
+
+
+One is for a specific username to find all routes associated with that user. 
+I have used username as method for communicating between different clusters. 
+
+
+
+
+It is a node server using express.
 It uses MongoDB Atlas.
 
-Currently deployed on Heroku but it will be dockerised and deployed on Azure. 
+Currently deployed on Heroku and it has been dockerised.

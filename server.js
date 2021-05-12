@@ -12,7 +12,7 @@ app.use(cors()); //middlewear
 app.use(express.json());
 
 
-const uri= 'mongodb+srv://JohnnyTommy:BodyBeast@cluster0.oneyu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const uri= process.env.ATLAS_URI;
 ;//my database
 mongoose.connect(uri, {useNewUrlParser:true, useCreateIndex:true, useUnifiedTopology: true}
 ).catch(err => console.log(err));
